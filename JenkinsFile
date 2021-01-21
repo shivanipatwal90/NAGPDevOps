@@ -19,9 +19,7 @@ pipeline{
     }
  }
  post{
-    always{
-        //Execute every time
-    }
+   
     success{
         echo 'success'
     }
