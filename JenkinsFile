@@ -4,22 +4,38 @@ pipeline{
         maven 'Maven'
     }
     stages{
+    stage ('checkout')
+    {
+        steps{
+            checkout scm
+        }
+    }
+    stage ('Build')
+    {
+        steps{
+            'mvn install'
+        }
+    }
+    stage ('Unit Testing')
     
-    stage("code checkout"){
+    {
         steps{
-        echo 'hello'
+            'mvn test'
         }
+    
     }
-    stage("code build"){
+    
+    stage ('Sonar Analaysis')
+    { 
         steps{
-        echo 'mvn clean'
+            withSonarQubeEnv("Test_Sonar"){
+                'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
+            }
         }
+    
     }
-    stage("Unit test"){
-        steps{
-        echo 'mvn test'
-        }
-    }
+    
+    
  }
  post{
    
