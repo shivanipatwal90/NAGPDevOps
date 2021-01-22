@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    tools{
+        maven 'Maven'
+    }
     stages{
     
     stage("code checkout"){
@@ -9,12 +12,12 @@ pipeline{
     }
     stage("code build"){
         steps{
-        echo 'build'
+        echo 'mvn clean'
         }
     }
     stage("Unit test"){
         steps{
-        echo 'unit'
+        echo 'mvn test'
         }
     }
  }
