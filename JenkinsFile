@@ -53,7 +53,7 @@ pipeline{
                 )
                 
                 rtPublishBuildInfo (
-                    serverId: 'artifactory@1234' 
+                    serverId: 'artifactory@1234' ,
                 )
         
         }
