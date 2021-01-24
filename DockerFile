@@ -1,0 +1,5 @@
+FROM tomcat:8.0-alpine
+MAINTAINER Shivani
+RUN apk update
+RUN apk add wget
+RUN wget --user=admin 
