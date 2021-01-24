@@ -40,7 +40,7 @@ pipeline{
         steps{
                 rtMavenDeployer(
                 id: 'deployer',
-                serverId: 'artifactory',      
+                serverId: 'artifactory@1234',      
                 releaseRepo: 'shivaniNAGPDevOps',
                 snapshotRepo: 'shivaniNAGPDevOps'
                 )
@@ -53,7 +53,7 @@ pipeline{
                 )
                 
                 rtPublishBuildInfo (
-                    servedId: 'artifactory' 
+                    servedId: 'artifactory@1234' 
                 )
         
         }
