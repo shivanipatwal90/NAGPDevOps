@@ -47,8 +47,8 @@ hpipeline{
                 
                 rtMavenRun(               
                     pom: 'pom.xml',
-                    goals: echo 'clean install',
-                    deployerId: 'deployer'
+                    goals: 'clean install',
+                    deployerId: 'deployer',
                 
                 )
                 
