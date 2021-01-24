@@ -46,7 +46,7 @@ pipeline{
                 )
                 
                 rtMavenRun(               
-                    pom: 'pom.xml',
+                    pom: 'NAGPDevOps/pom.xml',
                     goals: 'clean install',
                     deployerId: 'deployer',
                 
