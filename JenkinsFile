@@ -1,4 +1,4 @@
-pipeline{
+hpipeline{
     agent any
     tools{
         maven 'Maven'
@@ -47,7 +47,7 @@ pipeline{
                 
                 rtMavenRun(               
                     pom: 'pom.xml',
-                    goals: 'mvn clean install',
+                    goals: echo 'clean install',
                     deployerId: 'deployer'
                 
                 )
