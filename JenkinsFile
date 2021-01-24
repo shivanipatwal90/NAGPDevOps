@@ -45,7 +45,13 @@ pipeline{
                 snapshotRepo: 'shivaniNAGPDevOps'
                 )
                 
-               rtMaven.run pom: 'pom.xml', goals: 'clean install'
+               rtMavenRun(               
+                    pom: 'pom.xml',
+                    goals: 'clean install',
+                    deployerId: 'deployer',
+                    
+                
+                )
                
                 rtPublishBuildInfo (
                     serverId: 'artifactory@1234' ,
